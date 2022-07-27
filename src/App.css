@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: #F5F6FA;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  padding: 1rem 0.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Raleway', Sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  padding: 6%;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 30vw;
+  min-width: 22vw;
+  margin: 2rem;
+}
+
+.logo {
+  width: 100%;
+  max-width: 13vw;
+  margin: 0 auto;
+}
+
+.card .card-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card .card-title {
+  color: #32325d;
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-weight: 900;
+  margin: 4vh;
+}
+
+.card .card-body {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  color: #6b7c93;
+  font-weight: 500;
+  margin-bottom: 2.1em;
+}
+
+.card .card-button {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 1em 3em;
+  background-size: 300% 300%;
   color: white;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+  transition: 0.5s;
+  border: none;
+  width: 85%
 }
 
-.App-link {
-  color: #61dafb;
+.card .card-button:hover {
+  background-position: right center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-button:disabled {
+  background-image: linear-gradient(to right, #283048 0%, #859398  51%, #283048  100%);
+  color: #000;
+  text-decoration: none;
+}
+
+.noBullets {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.disconnectBtn {
+  background-image: repeating-linear-gradient(-45deg,
+      #7BDFF2 10px 30px,
+      #B2F7EF 30px 50px,
+      #EFF7F6 50px 70px,
+      #F7D6E0 70px 90px,
+      #F2B5D4 90px 110px);
+  color: black;
+  padding: 1vh;
+}
+
+#disconnectBtn:hover {
+  background-position: 20% center;
+}
+
+.disconnect {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1vw;
 }
