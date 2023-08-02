@@ -41,8 +41,6 @@ body {
   padding: 3rem 2rem;
   box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
   text-align: center;
-  max-width: 30vw;
-  min-width: 22vw;
   margin: 2rem;
 }
 
@@ -83,15 +81,13 @@ body {
   color: #fff;
   border-radius: 6px;
   margin: 10px;
-  padding: 1em 3em;
+  padding: 1em 2em;
   background-size: 300% 300%;
   color: white;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-
   background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
   transition: 0.5s;
   border: none;
-  width: 85%
 }
 
 .card .card-button:hover {
@@ -129,3 +125,10 @@ body {
   justify-content: flex-end;
   margin-right: 1vw;
 }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    max-width: 40vw;
+  }
+}
+
